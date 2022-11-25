@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #333;
+    color: white;
+}
+
+header {
+   margin-top: 50px;
+   text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h1 span {
+    color: #00ff00;
+}
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-bar,
+.container-produtos,
+.container-total {
+    background-color: #222;
+    border-radius: 10px;
+    width: 400px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.container-total{
+    display: flex;
+}
+
+.input-produto {
+    display: flex;
+    height: 50px;
+    padding: 0 25px;
+}
+
+.input-produto form input {
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid white;
+    padding: 0 20px 0 20px;
+}
+
+form {
+    display: flex;
+}
+
+#add-btn:hover {
+    background-color: #666;
+}
+
+#add-btn {
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    outline: none;
+    border: none;
+    margin-left: 20px;
+    background-color: #555;
+    color: #fff;
+}
+#limpar-btn {
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0 20px 0 20px;
+    outline: none;
+    border: none;
+    margin-left: 20px;
+    background-color: #555;
+    color: #fff;
+}
+
+.controles {
+    padding: 10px 15px;
+}
+
+.controles, li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filtros {
+    margin-left: 10px;
+}
+
+.filtros span {
+    font-size: 11px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.filtros span:hover {
+    color: #fff;
+}
+
+.filtros span:first-child {
+    margin-left: 0;
+}
+
+.filtros .active {
+    color: #00ff00;
+}
+
+.controles .limpar {
+    outline: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    border: none;
+    background-color: #222;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.container-produtos {
+    margin: 20px  25px;
+}
+.container-produtos .produto {
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.container-produtos .produto:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;  
+}
+
+.produto label {
+    display: flex;
+}
+
+.produto label p.checked {
+    text-decoration: line-through 2px red;
+}
+
+.produto label input {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.produto .configs {
+    cursor: pointer;
+    position: relative;
+}
+
+p .checked .comprados {
+    background-color: #00ff00;
+}
+
+.prod_menu {
+    display: flex;
+}
+
+.configs .prod_menu {
+    position: absolute;
+    padding: 5px 0;
+    z-index: 2;
+    right: -90px;
+    bottom: 10px;
+    transform: scale(0);
+    border-radius: 5px;
+    background-color: #222;
+    transition: transform 0.3s ease;
+    transform-origin: top-right;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.configs .prod_menu.show {
+    transform: scale(1);
+}
+
+.prod_menu li {
+    justify-content:center;
+    height: 25px;
+    font-size: 15px;
+    padding: 15px 12px;
+    margin-bottom: 2px;
+}
+
+.prod_menu li:last-child {
+    margin-bottom: 0;
+}
+
+.prod_menu li:hover {
+    background-color: #333;
+}
+
+.prod_menu li i {
+    padding-right: 10px;
+}
+
+.valor_total{
+    color: #00ff00;
+}
+
+input[type=checkbox] {
+    accent-color: #00ff00;
+  }
+
+  @media (max-width:450px) {
+    .prod_menu {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .configs .prod_menu {
+        position: absolute;
+        padding: 5px 0;
+        z-index: 2;
+        right: -30px;
+        bottom: 10px;
+        transform: scale(0);
+        border-radius: 5px;
+        background-color: #222;
+        transition: transform 0.3s ease;
+        transform-origin: top-right;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .configs .prod_menu.show {
+        transform: scale(1);
+    }
+    
+    
+  }
