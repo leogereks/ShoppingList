@@ -1,6 +1,7 @@
 const listaProdutos = document.querySelector("#lista-produtos");
 const addProduto = document.querySelector("#add-prod");
 containerProdutos = document.querySelector (".container-produtos");
+// const showGif = document.getElementById("gifs");
 
 produtos = JSON.parse(localStorage.getItem("lista-produtos"));
 let editId;
@@ -16,8 +17,8 @@ listaProdutos.addEventListener("submit", (e) => {
             if(!produtos) {
                 produtos = [];  
             }
-            let prodInfo = {name: inputProduto, status: "listados"};
-            produtos.push(prodInfo);
+                let prodInfo = {name: inputProduto, status: "listados", preco:0};
+                produtos.push(prodInfo);
         } else {
             editedProduct = false;
             produtos[editId].name = inputProduto;
@@ -27,12 +28,25 @@ listaProdutos.addEventListener("submit", (e) => {
         localStorage.setItem("lista-produtos", JSON.stringify(produtos));
         showProduct();
     }
+    
 });
 
 
-//EVENTOS
 
-// FUNCOES
+function exibir (){
+    document.getElementById("gifs").style.visibility="hidden";  
+}
+
+let showGif=document.getElementById("add-btn");
+showGif.addEventListener("click", () =>{
+    
+    exibir();
+    document.getElementById("gifs").style.visibility="visible"; 
+    setTimeout(exibir,800);
+
+});
+
+
 function showMenu(selectedProduct) {
     let produtoMenu = selectedProduct.parentElement.lastElementChild;
 
@@ -59,7 +73,7 @@ function editProduct(productId, productName){
     addProduto.classList.add("active");
 };
 
-//FUNCOES
+
 
 function showProduct() {
     let li = "";

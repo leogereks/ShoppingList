@@ -217,11 +217,50 @@ p .checked .comprados {
     color: #00ff00;
 }
 
+#gifs {
+    display: flex;
+    position:absolute;
+}
+
+#gif1{
+    left:30%;
+    top: 450px; 
+}
+#gif2{
+    left:45%;
+    top:280px;
+}
+#gif3{
+    left:55%;
+    top:100px;
+}
+
 input[type=checkbox] {
     accent-color: #00ff00;
   }
 
+  /* mobile */
+
   @media (max-width:450px) {
+
+    body {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .container-bar,
+    .container-produtos,
+    .container-total {
+        
+    background-color: #222;
+    border-radius: 10px;
+    width: 350px;
+    margin-right: 70px;
+    
+    
+    }
+
+
     .prod_menu {
         display: flex;
         flex-direction: column;
@@ -244,6 +283,26 @@ input[type=checkbox] {
     .configs .prod_menu.show {
         transform: scale(1);
     }
+
+    #gifs {
+        display: flex;
+        position:absolute;
+    }
+    
+    #gif1{
+        left:30%;
+        top: 450px; 
+    }
+    #gif2{
+        left:45%;
+        top:280px;
+    }
+    #gif3{
+        display: none;
+        left:55%;
+        top:100px;
+    }
+    
     
     
   }

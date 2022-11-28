@@ -17,26 +17,32 @@
     <header class="header">
         <h1><span>$</span>hoppingLi<span>$</span>t</h1>
     </header>
-
-            <section class="containers">
-                <div class="container-bar">
-                    <div class="input-produto">
-                        <form id="lista-produtos">
-                            <input type="text" id="add-prod" placeholder="adicione um produto" minlength="8" maxlength="64" required>
-                            <button type="submit"id="add-btn">Incluir</button>
-                        </form>
-                    </div>
-
+    <main>
+        <section class="containers">
+            <div class="container-bar">
+                <div class="input-produto">
+                    <form id="lista-produtos">
+                        <input type="text" id="add-prod" placeholder="adicione um produto" minlength="8" maxlength="64" required>
+                        <button type="submit"id="add-btn">Incluir</button>
+                    </form>
                 </div>
-                <div class="container-produtos">
-                    <ul></ul>
-                    </div>
-                    <div class="container-total">
-                        <h4 id="showVal">total: R$ 0,00</h4>
-                    </div>
-                </div>    
-            </section>
-
+            </div>
+        </section>
+        <section class="containers">
+            <div class="container-produtos">
+                <ul></ul>
+                </div>
+                <div class="container-total">
+                    <p id="showVal">TOTAL: R$ 0,00</p>
+                </div>
+            </div>    
+            <div id="gifs" style="visibility: hidden;">
+                <img id="gif1" width="200px" src="assets/img/dollarfly.gif">
+                <img id="gif2" width="200px" src="assets/img/dollarfly.gif">
+                <img id="gif3" width="200px" src="assets/img/dollarfly.gif">
+            </div>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
