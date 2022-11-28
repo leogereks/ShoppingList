@@ -243,10 +243,6 @@ input[type=checkbox] {
 
   @media (max-width:450px) {
 
-    body {
-        padding: 20px;
-        margin: 20px;
-    }
 
     .container-bar,
     .container-produtos,
@@ -255,7 +251,6 @@ input[type=checkbox] {
     background-color: #222;
     border-radius: 10px;
     width: 350px;
-    margin-right: 70px;
     
     
     }
